@@ -26,9 +26,9 @@ const pushRouterMobile = (event, route) => {
 
 <template>
   <div class="flex items-center absolute h-12 w-full">
-    <div class="icon absolute h-4/5 w-auto flex">
+    <div class="icon absolute h-4/5 w-auto flex pt-3">
       <RouterLink to="/home"
-        ><img class="relative z-20" src="../assets/img/Logo.png" alt=""
+        ><img class="relative z-30" src="../assets/img/Logo.png" alt=""
       /></RouterLink>
       <RouterLink to="/home"
         ><img
@@ -46,13 +46,13 @@ const pushRouterMobile = (event, route) => {
         class="flex absolute text-sm left-2/3 underline text-primary-a items-center"
       >
         <h2
-          class="headerOptionActive cursor-pointer z-20"
+          class="headerOptionActive cursor-pointer z-30"
           @click="pushRouterMobile($event, 'history')"
         >
           <strong><RouterLink to="/history">01. HISTORY </RouterLink></strong>
         </h2>
         <h2
-          class="ml-8 mx-4 cursor-pointer z-20"
+          class="ml-8 mx-4 cursor-pointer z-30"
           @click="pushRouterMobile($event, 'team')"
         >
           <strong><RouterLink to="/team">02. TEAM </RouterLink> </strong>
@@ -114,9 +114,5 @@ a:active,
 a:hover,
 a.router-link-active {
   @apply text-primary-a;
-}
-
-.icon {
-  left: 21%;
 }
 </style>

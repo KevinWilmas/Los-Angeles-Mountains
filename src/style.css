@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

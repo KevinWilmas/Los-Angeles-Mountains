@@ -8,6 +8,10 @@ module.exports = {
           a: "#414f6b",
         },
       },
+      fontFamily: {
+        Oswald: ["Oswald"],
+        Lato: ["Lato"],
+      },
     },
   },
   plugins: [],

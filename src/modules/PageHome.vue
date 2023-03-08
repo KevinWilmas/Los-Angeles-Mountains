@@ -2,7 +2,11 @@
 
 <template>
   <div>
-    <img class="w-full z-10 absolute" src="../assets/img/Image.png" alt="" />
+    <img
+      class="w-full z-10 flex relative"
+      src="../assets/img/Image.png"
+      alt=""
+    />
   </div>
 </template>
 
