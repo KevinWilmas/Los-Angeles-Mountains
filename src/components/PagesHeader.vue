@@ -38,7 +38,11 @@ const pushRouterMobile = (event, route) => {
       /></RouterLink>
     </div>
 
-    <div class="sm:hidden" @click.prevent="openMenu($event)">
+    <div
+      class="sm:hidden z-50 absolute right-5 pt-5"
+      @click.prevent="openMenu($event)"
+    >
+      <!-- <img class="z-50" src="../assets/img/bars.png" alt="" /> -->
       <i class="uil uil-bars text-3xl text-primary-a pr-2"></i>
     </div>
     <div class="hidden sm:block">
@@ -114,5 +118,15 @@ a:active,
 a:hover,
 a.router-link-active {
   @apply text-primary-a;
+}
+
+.icon {
+  left: 21%;
+}
+
+@media (max-width: 1065px) {
+  .icon {
+    left: 5%;
+  }
 }
 </style>

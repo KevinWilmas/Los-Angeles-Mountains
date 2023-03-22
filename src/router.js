@@ -14,9 +14,9 @@ const router = createRouter({
     },
     {
       path: "/history",
-      component: () => import("./modules/PageHistory.vue"),
+      component: () => import("./modules/PageOverview.vue"),
     },
-    { path: "/team", component: () => import("./modules/PageTeam.vue") },
+    { path: "/team", component: () => import("./modules/PageOverview.vue") },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

@@ -19,4 +19,14 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.icon {
+  left: 21%;
+}
+
+@media (max-width: 1065px) {
+  .icon {
+    left: 5%;
+  }
+}
+</style>
