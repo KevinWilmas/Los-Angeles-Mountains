@@ -1,20 +1,35 @@
 <script setup>
-const activateDot = function (slide) {
-  document
-    .querySelectorAll(".dot")
-    .forEach((dot) => dot.classList.remove("selecteddot"));
+import Carousel from "./Carousel.vue";
+import Slide from "./Slide.vue";
+import { ref } from "vue";
+// import Bg1 from "../assets/img/bg-1.png";
+// import Bg2 from "../assets/img/bg-2.png";
+// import Bg3 from "../assets/img/bg-3.png";
+// import Bg4 from "../assets/img/bg-4.png";
 
-  const slideIndex = slide.srcElement.dataset.slide;
-  document
-    .querySelector(`.dot[data-slide="${slideIndex}"]`)
-    .classList.add("selecteddot");
-};
+const carouselSlides = [
+  { url: "../assets/img/bg-1.png" },
+  { url: "../assets/img/bg-2.png" },
+  { url: "../assets/img/bg-3.png" },
+  { url: "../assets/img/bg-4.png" },
+];
 
-const slides = document.querySelectorAll(".slide");
+// const activateDot = function (slide) {
+//   document
+//     .querySelectorAll(".dot")
+//     .forEach((dot) => dot.classList.remove("selecteddot"));
 
-slides.forEach(
-  (s, i) => (s.getElementsByClassName.transform = `translateX(${100 * i}%)`)
-);
+//   const slideIndex = slide.srcElement.dataset.slide;
+//   document
+//     .querySelector(`.dot[data-slide="${slideIndex}"]`)
+//     .classList.add("selecteddot");
+// };
+
+// const slides = document.querySelectorAll(".slide");
+
+// slides.forEach(
+//   (s, i) => (s.getElementsByClassName.transform = `translateX(${100 * i}%)`)
+// );
 </script>
 
 <template>
@@ -44,7 +59,16 @@ slides.forEach(
       src="../assets/img/peak.png"
       alt=""
     />
-    <div
+    <div>
+      <Carousel class="carousel flex z-50">
+        <Slide v-for="(slide, index) in carouselSlides" :key="index"
+          ><div class="slide-info">
+            <img :src="slide.url" alt="" />
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
+    <!-- <div
       class="carousel--container -translate-y-full absolute w-full bg-primary-a bg-opacity-50 flex items-center"
     >
       <div class="carousel">
@@ -83,17 +107,22 @@ slides.forEach(
           <a href="#item4"><button class="dot" data-slide="4"></button></a>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+.carousel {
+  max-height: 100vh;
+  height: 100vh;
+}
+
 /* .imgsize {
   height: 745px;
   width: 2000px;
 } */
 
-.carousel {
+/* .carousel {
   display: flex;
   align-items: center;
   position: relative;
@@ -115,16 +144,16 @@ slides.forEach(
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .history--text {
   left: 7.5rem;
   bottom: 18%;
 }
 
-.carousel--container {
+/* .carousel--container {
   height: 225px;
-}
+} */
 
 /* CAROUSEL CONTROLS */
 /* .btn {
@@ -161,7 +190,7 @@ slides.forEach(
   transform: translate(50%, -50%);
 } */
 
-.dots {
+/* .dots {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -187,7 +216,7 @@ slides.forEach(
 
 .selecteddot {
   background-color: white;
-}
+} */
 
 @media (max-width: 1065px) {
   .mobile--picture--height {

@@ -1,9 +1,7 @@
-<script setup>
-import Header from "@/components/PagesHeader.vue";
-</script>
+<script setup></script>
 
 <template>
-  <Header />
+  
 
   <router-view v-slot="slotProps">
     <transition name="route" mode="out-in">

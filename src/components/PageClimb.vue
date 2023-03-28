@@ -57,7 +57,7 @@ const mountainOne = ref(true);
           alt=""
         />
         <img
-          v-else="mountainOne"
+          v-else
           class="slide relative w-full"
           src="../assets/img/photo-1417021423914-070979c8eb34.png"
           alt=""
@@ -67,7 +67,7 @@ const mountainOne = ref(true);
       <div
         class="schedule-box bg-opacity-70 absolute bg-white py-6 px-16 left-1/4 flex"
       >
-        <table>
+        <table v-if="mountainOne">
           <tr>
             <td
               class="text-5xl text-primary-a opacity-80 font-Oswald flex justify-center p-1"
@@ -97,8 +97,42 @@ const mountainOne = ref(true);
             <td class="opacity-0">.</td>
           </tr>
           <tr>
-            <td class="p-1 text-lg">7 Jan 2016</td>
+            <td class="p-1 text-lg">7 Jan 2017</td>
             <td class="p-1 text-lg">Lorem ipsum</td>
+          </tr>
+        </table>
+        <table v-else>
+          <tr>
+            <td
+              class="text-5xl text-primary-a opacity-80 font-Oswald flex justify-center p-1"
+            >
+              <strong>Schedule</strong>
+            </td>
+            <td class="p-1"></td>
+          </tr>
+          <tr>
+            <td class="p-1 text-lg">25 Nov 2017</td>
+            <td class="p-1 text-lg">Ipsum lorem</td>
+          </tr>
+          <tr>
+            <td class="p-1 text-lg">28 Nov 2017</td>
+            <td class="p-1 text-lg">Ipsum lorem</td>
+          </tr>
+          <tr>
+            <td class="opacity-0">.</td>
+            <td class="opacity-0">.</td>
+          </tr>
+          <tr>
+            <td class="p-1 text-lg">18 Dec 2017</td>
+            <td class="p-1 text-lg">Ipsum lorem</td>
+          </tr>
+          <tr>
+            <td class="opacity-0">.</td>
+            <td class="opacity-0">.</td>
+          </tr>
+          <tr>
+            <td class="p-1 text-lg">7 Jan 2018</td>
+            <td class="p-1 text-lg">Ipsum lorem</td>
           </tr>
         </table>
       </div>

@@ -42,21 +42,18 @@ const pushRouterMobile = (event, route) => {
       class="sm:hidden z-50 absolute right-5 pt-5"
       @click.prevent="openMenu($event)"
     >
-      <!-- <img class="z-50" src="../assets/img/bars.png" alt="" /> -->
       <i class="uil uil-bars text-3xl text-primary-a pr-2"></i>
     </div>
     <div class="hidden sm:block">
-      <div
-        class="flex absolute text-sm left-2/3 underline text-primary-a items-center"
-      >
+      <div class="flex absolute text-sm left-2/3 items-center header--text">
         <h2
-          class="headerOptionActive cursor-pointer z-30"
+          class="text-primary-a headerOptionActive cursor-pointer z-30"
           @click="pushRouterMobile($event, 'history')"
         >
           <strong><RouterLink to="/history">01. HISTORY </RouterLink></strong>
         </h2>
         <h2
-          class="ml-8 mx-4 cursor-pointer z-30"
+          class="text-primary-a ml-8 mx-4 cursor-pointer z-30"
           @click="pushRouterMobile($event, 'team')"
         >
           <strong><RouterLink to="/team">02. TEAM </RouterLink> </strong>
@@ -117,7 +114,7 @@ const pushRouterMobile = (event, route) => {
 a:active,
 a:hover,
 a.router-link-active {
-  @apply text-primary-a;
+  @apply underline;
 }
 
 .icon {

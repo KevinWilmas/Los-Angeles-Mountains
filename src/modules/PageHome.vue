@@ -1,9 +1,12 @@
-<script setup></script>
+<script setup>
+import Header from "@/components/PagesHeader.vue";
+</script>
 
 <template>
   <div>
+    <Header />
     <img
-      class="w-full h-full z-10 flex absolute"
+      class="home--image w-full h-full z-10 flex absolute"
       src="../assets/img/Image.png"
       alt=""
     />
@@ -11,11 +14,11 @@
 </template>
 
 <style scoped>
-@media (max-width: 1065px) {
-  /* .climb--number--image {
-  left: 20%;
-  }  */
+:deep(.header--text) h2 {
+  @apply text-white;
+}
 
+@media (max-width: 1065px) {
   .home--image {
     min-width: full;
     min-height: full;
