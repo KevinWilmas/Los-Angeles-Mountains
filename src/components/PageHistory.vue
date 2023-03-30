@@ -8,12 +8,15 @@ import { ref } from "vue";
 // import Bg4 from "../assets/img/bg-4.png";
 
 const carouselSlides = [
-  { url: "../assets/img/bg-1.png" },
-  { url: "../assets/img/bg-2.png" },
-  { url: "../assets/img/bg-3.png" },
-  { url: "../assets/img/bg-4.png" },
+  { url: "bg-1.png" },
+  { url: "bg-2.png" },
+  { url: "bg-3.png" },
+  { url: "bg-4.png" },
 ];
 
+const getImageUrl = (name) => {
+  return new URL(`../assets/img/${name}`, import.meta.url).href;
+};
 // const activateDot = function (slide) {
 //   document
 //     .querySelectorAll(".dot")
@@ -55,15 +58,20 @@ const carouselSlides = [
       </div>
     </div>
     <img
-      class="mobile--picture--height w-full"
+      class="history--background w-full"
       src="../assets/img/peak.png"
       alt=""
     />
-    <div>
-      <Carousel class="carousel flex z-50">
-        <Slide v-for="(slide, index) in carouselSlides" :key="index"
-          ><div class="slide-info">
-            <img :src="slide.url" alt="" />
+    <div
+      class="carousel--container -translate-y-full absolute w-full bg-primary-a bg-opacity-50 flex items-center"
+    >
+      <Carousel class="carousel" v-slot="{ currentSlide }">
+        <Slide
+          class="carousel--image--container"
+          v-for="(slide, index) in carouselSlides"
+          :key="index"
+          ><div v-show="currentSlide === index + 1" class="slide-info">
+            <img :src="getImageUrl(slide.url)" alt="" />
           </div>
         </Slide>
       </Carousel>
@@ -112,9 +120,26 @@ const carouselSlides = [
 </template>
 
 <style lang="scss" scoped>
-.carousel {
-  max-height: 100vh;
-  height: 100vh;
+// .carousel {
+//   position: relative;
+//   max-height: 100vh;
+//   height: 100vh;
+// }
+
+.slide-info {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  // width: 100%;
+  // max-height: 100%;
+  // height: 100%;
+
+  .img {
+    // min-width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+  }
 }
 
 /* .imgsize {
@@ -122,7 +147,7 @@ const carouselSlides = [
   width: 2000px;
 } */
 
-/* .carousel {
+.carousel {
   display: flex;
   align-items: center;
   position: relative;
@@ -131,13 +156,14 @@ const carouselSlides = [
   transform: translate(-50%, 0);
   height: 168px;
 }
+
 .carousel--image--container {
   display: flex;
   width: 253px;
   overflow: hidden;
   scroll-behavior: smooth;
 }
-
+/*
 .carousel--image--container .item {
   flex: 0 0 253px;
   overflow: hidden;
@@ -151,9 +177,9 @@ const carouselSlides = [
   bottom: 18%;
 }
 
-/* .carousel--container {
+.carousel--container {
   height: 225px;
-} */
+}
 
 /* CAROUSEL CONTROLS */
 /* .btn {
@@ -219,7 +245,7 @@ const carouselSlides = [
 } */
 
 @media (max-width: 1065px) {
-  .mobile--picture--height {
+  .history--background {
     height: 600px;
   }
 

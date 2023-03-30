@@ -48,17 +48,17 @@ const mountainOne = ref(true);
       </ul>
     </div>
     <div class="relative w-full flex">
-      <div class="slider flex overflow-hidden">
+      <div class="mountain--buttons flex overflow-hidden">
         <div></div>
         <img
           v-if="mountainOne"
-          class="slide relative w-full"
+          class="mountain--button relative w-full"
           src="../assets/img/photo-1414449381078-c7768b8f19b8.png"
           alt=""
         />
         <img
           v-else
-          class="slide relative w-full"
+          class="mountain--button relative w-full"
           src="../assets/img/photo-1417021423914-070979c8eb34.png"
           alt=""
         />
@@ -183,7 +183,7 @@ const mountainOne = ref(true);
   font-weight: bold;
 }
 
-.slide {
+.mountain--button {
   height: 800px;
 }
 
