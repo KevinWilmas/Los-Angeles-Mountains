@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex items-center absolute h-16 w-full bg-primary-a">
+  <div class="flex items-center absolute h-20 w-full bg-primary-a">
     <div class="icon opacity-10 absolute w-auto flex items-center">
       <RouterLink to="/home"
         ><img class="relative z-30" src="../assets/img/Logo.png" alt=""

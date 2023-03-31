@@ -13,6 +13,7 @@ const closeMenu = (e) => {
   const menu = document.querySelector(".menu");
   menu.classList.remove("active");
 };
+
 const pushRouterMobile = (event, route) => {
   const el = document.querySelector(".headerOptionActive");
   if (el) {
@@ -21,6 +22,11 @@ const pushRouterMobile = (event, route) => {
   event.target.className += " headerOptionActive";
   router.push(route);
   closeMenu();
+};
+
+const scrollToClimb = () => {
+  const climbCoords = climbContainer.getBoundingClientRect();
+  window.scrollTo(climbCoords.left, climbCoords.top + window.scrollY);
 };
 </script>
 
@@ -56,7 +62,11 @@ const pushRouterMobile = (event, route) => {
           class="text-primary-a ml-8 mx-4 cursor-pointer z-30"
           @click="pushRouterMobile($event, 'team')"
         >
-          <strong><RouterLink to="/team">02. TEAM </RouterLink> </strong>
+          <strong
+            ><RouterLink to="/team" :to="{ hash: '#climb--container' }"
+              >02. TEAM
+            </RouterLink>
+          </strong>
         </h2>
       </div>
     </div>
@@ -91,7 +101,9 @@ const pushRouterMobile = (event, route) => {
           class="my-4 cursor-pointer"
           @click="pushRouterMobile($event, 'team')"
         >
-          <RouterLink to="/team"> Team</RouterLink>
+          <RouterLink to="/team" :to="{ hash: '#climb--container' }">
+            Team</RouterLink
+          >
         </li>
       </ul>
     </div>

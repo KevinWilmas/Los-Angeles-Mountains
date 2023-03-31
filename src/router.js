@@ -21,8 +21,16 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
+    } else {
+      const position = {};
+      if (to.hash) {
+        position.selector = to.hash;
+        if (document.querySelector(to.hash)) {
+          return position;
+        }
+        return { left: 0, top: 0 };
+      }
     }
-    return { left: 0, top: 0 };
   },
 });
 

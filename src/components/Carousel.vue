@@ -36,11 +36,11 @@ const goToSlide = (index) => {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  transform: translate(0, 425%);
+  transform: translate(0, 550%);
   span {
     cursor: pointer;
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background-color: gray;
     opacity: 80%;

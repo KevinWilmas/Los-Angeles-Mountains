@@ -1,12 +1,17 @@
 <script setup>
 import { ref } from "vue";
 
+const climbContainer = document.querySelector("#climb--container");
+
 const mountainOne = ref(true);
 </script>
 
 <template>
   <div>
-    <div class="climb--container flex h-36 mt-4 items-center">
+    <div
+      class="climb--container flex h-36 mt-4 items-center"
+      id="climb--container"
+    >
       <div
         class="climb--number--container flex relative z-20 left-1/2 -translate-x-1/2 items-center"
       >
