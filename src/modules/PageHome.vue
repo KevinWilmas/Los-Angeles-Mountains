@@ -48,19 +48,18 @@ import PagesFooter from "../components/PagesFooter.vue";
 
 @media (max-width: 900px) {
   .home--image {
-    height: 800px;
+    height: 850px;
   }
 
   .pages--footer {
     margin-top: 800px;
-    padding-bottom: 100%;
-    /* height: 180px; */
+    height: 180px;
   }
 }
 
 @media (max-width: 750px) {
   .home--image {
-    height: 750px;
+    height: 830px;
   }
 
   .pages--footer {
@@ -71,11 +70,24 @@ import PagesFooter from "../components/PagesFooter.vue";
 
 @media (max-width: 650px) {
   .home--image {
+    height: 750px;
+  }
+
+  .pages--footer {
+    margin-top: 650px;
+    padding-top: 0;
+    height: 330px;
+  }
+}
+@media (max-width: 550px) {
+  .home--image {
     height: 650px;
   }
 
   .pages--footer {
-    padding-bottom: 100px;
+    margin-top: 600px;
+    padding-top: 0;
+    height: 315px;
   }
 }
 </style>

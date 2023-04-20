@@ -131,21 +131,7 @@ const getImageUrl = (name) => {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  // width: 100%;
-  // max-height: 100%;
-  // height: 100%;
-
-  .img {
-    // min-width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-  }
 }
-
-/* .imgsize {
-  height: 745px;
-  width: 2000px;
-} */
 
 .carousel {
   display: flex;
@@ -163,14 +149,6 @@ const getImageUrl = (name) => {
   overflow: hidden;
   scroll-behavior: smooth;
 }
-/*
-.carousel--image--container .item {
-  flex: 0 0 253px;
-  overflow: hidden;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .history--text {
   left: 7.5rem;
@@ -180,69 +158,6 @@ const getImageUrl = (name) => {
 .carousel--container {
   height: 225px;
 }
-
-/* CAROUSEL CONTROLS */
-/* .btn {
-  background-color: white;
-  border: none;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 24px rgba(0, 0 0, 0, 2);
-  top: 50%;
-}
-
-.btn-icon {
-  height: 24px;
-  width: 24px;
-  stroke: gray;
-} */
-
-/* .btn:hover .btn-icon {
-  stroke: black;
-} */
-
-/* .btn--left {
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-
-.btn--right {
-  right: 0;
-  transform: translate(50%, -50%);
-} */
-
-/* .dots {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 98%);
-
-  display: flex;
-  gap: 12px;
-}
-
-.dot {
-  height: 6px;
-  width: 6px;
-  background-color: gray;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot:hover,
-.dot:active,
-.dot.selectedDot {
-  background-color: white;
-}
-
-.selecteddot {
-  background-color: white;
-} */
 
 @media (max-width: 1065px) {
   .history--background {
@@ -265,5 +180,26 @@ const getImageUrl = (name) => {
     width: 90%;
     left: 12%;
   }
+
+  .carousel {
+    width: 100%;
+  }
 }
+
+// @media (max-width: 1000px) {
+//   .carousel {
+//     // height: 225px;
+//   }
+// }
+
+// @media (max-width: 900px) {
+// }
+
+// @media (max-width: 750px) {
+// }
+
+// @media (max-width: 650px) {
+// }
+// @media (max-width: 550px) {
+// }
 </style>
