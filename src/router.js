@@ -6,19 +6,34 @@ const router = createRouter({
   routes: [
     {
       path: "/",
+
       redirect: "/home",
     },
     {
       path: "/home",
+      name: "Home",
       component: HomePage,
     },
     {
       path: "/history",
+      name: "History",
       component: () => import("./modules/PageOverview.vue"),
     },
-    { path: "/team", component: () => import("./modules/PageOverview.vue") },
+    {
+      path: "/team",
+      name: "Team",
+      component: () => import("./modules/PageOverview.vue"),
+      meta: {
+        scrollToClimb: true,
+      },
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
+    const climbContainer = document.querySelector("#climb--container");
+    const climbCoords = climbContainer.getBoundingClientRect();
+    if (to.meta.scrollToClimb)
+      return window.scrollTo(climbCoords.left, climbCoords.top);
+
     if (savedPosition) {
       return savedPosition;
     } else {

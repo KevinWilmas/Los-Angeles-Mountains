@@ -4,6 +4,8 @@ import { ref } from "vue";
 const climbContainer = document.querySelector("#climb--container");
 
 const mountainOne = ref(true);
+
+
 </script>
 
 <template>

@@ -185,21 +185,4 @@ const getImageUrl = (name) => {
     width: 100%;
   }
 }
-
-// @media (max-width: 1000px) {
-//   .carousel {
-//     // height: 225px;
-//   }
-// }
-
-// @media (max-width: 900px) {
-// }
-
-// @media (max-width: 750px) {
-// }
-
-// @media (max-width: 650px) {
-// }
-// @media (max-width: 550px) {
-// }
 </style>

@@ -24,10 +24,11 @@ const pushRouterMobile = (event, route) => {
   closeMenu();
 };
 
-const scrollToClimb = () => {
-  const climbCoords = climbContainer.getBoundingClientRect();
-  window.scrollTo(climbCoords.left, climbCoords.top + window.scrollY);
-};
+// function scrollToClimb() {
+//   router.push({ name: "Team" });
+//   const climbCoords = climbContainer.getBoundingClientRect();
+//   window.scrollTo(climbCoords.left, climbCoords.top + window.scrollY);
+// }
 </script>
 
 <template>
@@ -43,7 +44,6 @@ const scrollToClimb = () => {
           alt=""
       /></RouterLink>
     </div>
-
     <div
       class="sm:hidden z-50 absolute right-5 pt-5"
       @click.prevent="openMenu($event)"
@@ -62,18 +62,12 @@ const scrollToClimb = () => {
           class="text-primary-a ml-8 mx-4 cursor-pointer z-30"
           @click="pushRouterMobile($event, 'team')"
         >
-          <strong
-            ><RouterLink to="/team" :to="{ hash: '#climb--container' }"
-              >02. TEAM
-            </RouterLink>
-          </strong>
+          <strong><RouterLink to="/team">02. TEAM </RouterLink> </strong>
         </h2>
       </div>
     </div>
   </div>
-
   <!-- Mobile Menu -->
-
   <div
     class="menu mobile-menu hidden fixed top-0 bottom-0 left-0 right-0 bg-black"
   >
@@ -101,9 +95,7 @@ const scrollToClimb = () => {
           class="my-4 cursor-pointer"
           @click="pushRouterMobile($event, 'team')"
         >
-          <RouterLink to="/team" :to="{ hash: '#climb--container' }">
-            Team</RouterLink
-          >
+          <RouterLink to="/team"> Team</RouterLink>
         </li>
       </ul>
     </div>
