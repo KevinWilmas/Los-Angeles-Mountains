@@ -11,7 +11,7 @@ import PagesFooter from "../components/PagesFooter.vue";
       src="../assets/img/Image.png"
       alt=""
     />
-    <PagesFooter class="pages--footer absolute bg-primary-a" />
+    <PagesFooter class="home--pages--footer absolute bg-primary-a" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import PagesFooter from "../components/PagesFooter.vue";
   image-rendering: -webkit-optimize-contrast;
 }
 
-.pages--footer {
+.home--pages--footer {
   display: none;
 }
 
@@ -40,7 +40,7 @@ import PagesFooter from "../components/PagesFooter.vue";
     height: 900px;
   }
 
-  .pages--footer {
+  .home--pages--footer {
     display: flex;
     margin-top: 900px;
   }
@@ -51,7 +51,7 @@ import PagesFooter from "../components/PagesFooter.vue";
     height: 850px;
   }
 
-  .pages--footer {
+  .home--pages--footer {
     margin-top: 800px;
     height: 180px;
   }
@@ -62,7 +62,7 @@ import PagesFooter from "../components/PagesFooter.vue";
     height: 830px;
   }
 
-  .pages--footer {
+  .home--pages--footer {
     margin-top: 750px;
     height: 230px;
   }
@@ -73,7 +73,7 @@ import PagesFooter from "../components/PagesFooter.vue";
     height: 750px;
   }
 
-  .pages--footer {
+  .home--pages--footer {
     margin-top: 650px;
     padding-top: 0;
     height: 330px;
@@ -81,11 +81,10 @@ import PagesFooter from "../components/PagesFooter.vue";
 }
 @media (max-width: 550px) {
   .home--image {
-    height: 650px;
+    height: 700px;
   }
 
-  .pages--footer {
-    margin-top: 600px;
+  .home--pages--footer {
     padding-top: 0;
     height: 315px;
   }

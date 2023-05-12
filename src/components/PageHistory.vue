@@ -159,9 +159,13 @@ const getImageUrl = (name) => {
   height: 225px;
 }
 
+.history--background {
+  height: 700px;
+}
+
 @media (max-width: 1065px) {
   .history--background {
-    height: 600px;
+    height: 690px;
   }
 
   .history--number--image {

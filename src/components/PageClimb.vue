@@ -4,12 +4,11 @@ import { ref } from "vue";
 const climbContainer = document.querySelector("#climb--container");
 
 const mountainOne = ref(true);
-
-
 </script>
 
 <template>
   <div>
+    <div class="w-full h-20 bg-white"></div>
     <div
       class="climb--container flex h-36 mt-4 items-center"
       id="climb--container"
@@ -55,17 +54,17 @@ const mountainOne = ref(true);
       </ul>
     </div>
     <div class="relative w-full flex">
-      <div class="mountain--buttons flex overflow-hidden">
+      <div class="mountain--images flex overflow-hidden">
         <div></div>
         <img
           v-if="mountainOne"
-          class="mountain--button relative w-full"
+          class="mountain--image relative w-full"
           src="../assets/img/photo-1414449381078-c7768b8f19b8.png"
           alt=""
         />
         <img
           v-else
-          class="mountain--button relative w-full"
+          class="mountain--image relative w-full"
           src="../assets/img/photo-1417021423914-070979c8eb34.png"
           alt=""
         />
@@ -190,11 +189,14 @@ const mountainOne = ref(true);
   font-weight: bold;
 }
 
-.mountain--button {
+.mountain--image {
   height: 800px;
 }
 
 @media (max-width: 1065px) {
+  .mountain--image {
+    height: 800px;
+  }
   .climb--container {
     left: 0;
   }
@@ -237,6 +239,9 @@ const mountainOne = ref(true);
 }
 
 @media (max-width: 655px) {
+  .mountain--image {
+    height: 600px;
+  }
   .climb--container {
     left: 0;
   }
@@ -258,6 +263,7 @@ const mountainOne = ref(true);
     font-size: 2rem;
     width: 20%;
     left: 10%;
+    transform: translateX(30px);
   }
 
   .climb--paragraph {
@@ -269,6 +275,7 @@ const mountainOne = ref(true);
     padding-right: 0 0 0 1;
     width: 60%;
     /* display: flex; */
+    transform: translateX(30px);
   }
 }
 </style>

@@ -1,6 +1,5 @@
 <script setup>
 import PageHistory from "../components/PageHistory.vue";
-import PageClimb from "../components/PageClimb.vue";
 import PagesFooter from "../components/PagesFooter.vue";
 import Header from "@/components/PagesHeader.vue";
 </script>
@@ -9,9 +8,14 @@ import Header from "@/components/PagesHeader.vue";
   <div>
     <Header />
     <PageHistory />
-    <PageClimb />
-    <PagesFooter />
+    <PagesFooter class="history--pages--footer" />
   </div>
 </template>
 
-<style></style>
+<style scoped>
+@media (max-width: 500px) {
+  .history--pages--footer {
+    height: 145px;
+  }
+}
+</style>
